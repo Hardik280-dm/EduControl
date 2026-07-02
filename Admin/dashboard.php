@@ -114,10 +114,10 @@
                 <div class="dashboard-activity-hd-cnt">
                     <h1>Recent Administrative Activity</h1>
                     <div class="flex-container-rw">
-                    <button type="button" class="open-modal" data-modal="view-log"   style="background-color:white; border:none;">
-                        View all Log
-                    </button>
-                    <button type="button" class="close-modal" style="background-color:white; border:none;"><i class="fa-solid fa-arrow-up"></i></button>
+                        <button type="button" class="open-modal view-log" data-modal="view-log"   style="background-color:white; border:none;">
+                            View all Log
+                        </button>
+                        <button type="button" class="close-modal" style="background-color:white; border:none;"><i class="fa-solid fa-arrow-up"></i></button>
                     </div>
                 </div>
                 <?php while($result  = mysqli_fetch_assoc($query)) { ?>

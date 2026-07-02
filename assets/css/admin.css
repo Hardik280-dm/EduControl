@@ -179,7 +179,7 @@ body{
     margin:5px 0 0 10px;
 }
 
-.dashboard-activity-hd-cnt a{
+.view-log {
 
     align-items:center;
     justify-content:center;
@@ -1826,4 +1826,22 @@ input[type="date"]{
 
     height:350px;
     width:350px;    
+}
+
+/* Initial Avater Css */ /* Initial Avater Css */ /* Initial Avater Css */
+/* Initial Avater Css */ /* Initial Avater Css */ /* Initial Avater Css */
+
+.Avater{
+    display:flex;
+    height:40px;
+    width:40px;
+    /* background-color:rgb(184, 234, 184);
+    color:black; */
+    font-family:Roboto;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    border-radius:5px;
+    font-size:15px;
+    font-weight:800;
 }

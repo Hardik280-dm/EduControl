@@ -1,7 +1,11 @@
 <?php
     include "sidebar.php";
     include "../assets/Database/Connection.php";
+    include "../assets/Database/Db_functions.php";
+
     $db = new Database;
+    $conn = $db->conn;
+    const TABLE = "student_meta";
 
 
     if(isset($_POST["submit"])){
@@ -27,6 +31,12 @@
             $_POST["add_p"],
             $_POST["p_photo"]
         );
+        // takeout  Recently generate Std-id 
+        $stdId = $conn->insert_id;
+        $initial = $_POST["fname"][0].$_POST["lname"][0];
+
+        [$bg,$txt] = getAvatarColor($_POST["fname"]);
+        avater_colors($stdId,$conn,TABLE,$bg,$txt,$initial);
     }
     ?>
 <html>

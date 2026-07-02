@@ -1,10 +1,12 @@
 <?php
     include "sidebar.php";
     include "../assets/Database/Connection.php";
+    include "../assets/Database/Db_functions.php";
 
         $db = new Database();
         $result = $db->Select_students();
-
+        $conn = $db->conn;
+        const TABLE = "student_meta";
     ?> 
 <html>
 
@@ -107,8 +109,8 @@
                                 <td>
                                     <!-- Use Avatar initial generation -->
                                     <div class="std-table-profile">
-                                        <img src="../Design (DDS)/Color Combo.png" height="30px" width="30px;">
-
+                                        <?php [$bg,$txt,$nm] = FetchAvatar($conn,$row["Std_id"]) ?>
+                                        <div class="Avater" style="background-color:<?php echo $bg; ?>; color:<?php echo $txt; ?>"><?php echo $nm; ?></div>
                                         
                                         <div class="std-table-profile-font">
                                             <!-- STUDENT NAME -->
